@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">
+        My Custom Demo
+    </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet"
+          href="https://checkoutshopper-test.cdn.adyen.com/checkoutshopper/sdk/6.17.0/adyen.css">
+
+    <script src="https://checkoutshopper-test.cdn.adyen.com/checkoutshopper/sdk/6.17.0/adyen.js"></script>
+
+    <link rel="stylesheet" href="/css/application.css" />
+</head>
+<body>
+<header id="header">
+    <div class="container d-flex align-items-center">
+        <a href="/" class="d-flex align-items-center text-dark" style="text-decoration: none;">
+            <img src="/images/mystore-logo.svg" alt="My Store Logo" style="height: 30px;" />
+            <span class="ml-2 h5 mb-0 font-weight-bold">My Demo Store</span>
+        </a>
+    </div>
+</header>
+
+<div class="container">
+    <th:block layout:fragment="content" />
+</div>
+
+<footer class="container text-center text-muted py-4 mt-4 border-top">
+    <small>&copy; 2025 My Demo Store. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>

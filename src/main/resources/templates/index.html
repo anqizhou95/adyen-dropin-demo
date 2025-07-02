@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+  <title>Select a Product</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+  <div class="text-center mb-5">
+    <h1 class="display-6 fw-bold">Start Your Demo</h1>
+    <p class="lead text-muted">Select a product below to proceed to Adyen's Drop-in checkout.</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+
+    <div class="col" style="max-width: 400px;">
+      <div class="card h-100 shadow-sm">
+
+        <img src="/images/coffeebean.jpeg" alt="Coffee Beans">
+        <div class="card-body">
+          <h5 class="card-title">Arabica</h5>
+          <p class="card-text text-muted">A bold, timeless classic for your morning ritual.</p>
+        </div>
+        <div class="card-footer bg-white border-top-0 pt-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fs-4 fw-bold">3000 Yen</span>
+            <a th:href="@{/cart}" class="checkout-button-link short">
+              <p class="button">Select</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col" style="max-width: 400px;">
+      <div class="card h-100 shadow-sm">
+        <img src="/images/coffeebean.jpeg" class="card-img-top" alt="Matcha Latte">
+        <div class="card-body">
+          <h5 class="card-title">Robusta</h5>
+          <p class="card-text text-muted">A refreshing and creamy treat for any time of day.</p>
+        </div>
+        <div class="card-footer bg-white border-top-0 pt-0">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fs-4 fw-bold">3000 Yen</span>
+            <a th:href="@{/cart}" class="checkout-button-link short">
+              <p class="button">Select</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
